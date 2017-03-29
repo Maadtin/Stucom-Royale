@@ -8,6 +8,7 @@
 	<body>
 		<h1>Registro jugadores</h1>
 		<div class="contenedor-principal">
+		<div class="form-container">
 		<form action="" method="post">
 			<label>Nombre de usuario <input type="text" name="username" id="username"></label>
 			<script>document.getElementById('username').value = "<?php echo $_POST['username'];?>";</script>
@@ -18,7 +19,8 @@
 			<input type="submit" value="Registrar jugador" name="registrar">
 
 		</form>
-	
+		</div>
+		<div class="mensaje-errores">
 		<?php 
 
 			if(isset($_POST["registrar"])){
@@ -55,7 +57,11 @@
 							echo "<p>Las contraseñas deben de coincidir.</p>";
 
 						} else {
-							registrarUsuario($username, $pass1);
+
+							if(registrarUsuario($username, $pass1)){
+								$id = 1;
+								header("Location: ../INDEX/index.php?result=$id");
+							}
 						}
 
 					}
@@ -68,6 +74,7 @@
 
 
 		?>
+		</div>	
 		</div>
 	</body>
 	</html>

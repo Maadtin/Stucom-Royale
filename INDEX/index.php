@@ -23,7 +23,7 @@
 
 	?>
 	<h1>Stucom Royale</h1>
-	<div class="mensaje"><?php echo $mensaje ?></div>
+	<div class="mensaje"><p><?php echo $mensaje ?></p></div>
 
 	<div class="contenedor-menu">
 		<a href="../INSERT/registro-jugador.php">Registro jugadores</a>

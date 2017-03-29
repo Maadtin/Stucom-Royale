@@ -22,7 +22,9 @@
 
 		$sql = "INSERT INTO user VALUES('$userName', '$userPass', 0, 0, 1)";
 
-		echo (mysqli_query($con, $sql)) ? "Usuario registrado correctamente" : mysqli_error($con);
+		$resultado = mysqli_query($con, $sql);
+
+		return $resultado;
 
 	}
 
