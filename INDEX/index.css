@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Macondo');
 
+
 * {
 	box-sizing: border-box;
 	font-family: 'Macondo', cursive;
@@ -7,11 +8,60 @@
 	margin: 0;
 }
 
-form input[type="submit"] {
+body {
+	padding: 1.5em;
+	background: url(../IMG/royale..jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+}
+
+label {
+	color: white;
+	font-size: 18px;
+}
+
+input {
 	border: 2px solid transparent;
-	padding: .5em 1em;
+	border-radius: 10px;
+	padding: .3em;
+	transition: all linear 0.2s;
+}
+
+input:focus {
+	border: 2px solid black;
+}
+
+h1 {
+	color: white;
+}
+
+a {
+	display: table;
+	transition: all linear 0.2s;
+	line-height: 30px;
+	color: white;
+	font-size: 20px;
+}
+
+.contenedor-menu  {
+	line-height: 30px;
+	transition: all linear 0.2s;
+	display: table;
+}
+
+a:hover {
+	color: #F60;
+}
+
+form input[type="submit"] {
+	border: 2px solid white;
 	cursor: pointer;
 	transition: all linear 0.2s;
+	margin-top: 2em;
+	font-size: 16px;
+
 }
 
 form input[type="submit"]:hover {
@@ -20,26 +70,63 @@ form input[type="submit"]:hover {
 	color: #fff;
 }
 
+input[type="checkbox"] {
+	display: none;
+}
+
 .mensaje, .contenedor-menu {
 	margin: 20px  auto;
 	width: 50%;
 	background: #eee;
 	padding: 1em;
+	background: rgba(255, 255, 255, 0.5);
 }
 
 .contenedor-principal {
 	width: 50%;
 	margin: 20px auto;
 	background: #eee;
+	padding: 1em;
+	position: relative;
+	background: rgba(255, 255, 255, 0.5);
 }
 
 h1 {
 	text-align: center;
 }
 
+
+div.batalla {
+	padding: 0;
+}
+
+.contenedor-principal  p {
+	line-height: 25px;
+}
+
 label {
 	display: block;
 	margin-bottom: 10px;
+}
+
+label.showPass {
+	display: initial;
+	font-size: 10px;
+	border: 1px solid black;
+	cursor: pointer;
+	transition: all linear 0.2s;
+	padding: .2em .5em;
+	background: #eee;
+	color: #000;
+}
+
+label.showPass:hover {
+	background: #000;
+	color: #fff;
+}
+
+.showPass input {
+	margin-right: 10px;
 }
 
 .error {
@@ -51,7 +138,7 @@ label {
 	background: rgb(170, 212, 170);
 	border: 2px solid darkgreen;
 }
-1810942
+
 .mensaje-errores {
     border: 2px solid red;
     margin-top: 1em;
@@ -60,4 +147,84 @@ label {
 
 .form-container, .mensaje-errores {
 	padding: 1em;
+	position: relative;
 }
+
+
+.volver-menu {
+	position: absolute;
+	right: 1em;
+	bottom: 1em;	
+}
+
+a {
+	text-decoration: none;
+}
+
+.ext-batalla {
+	position: static;
+	margin-top: 1em;
+}
+
+.volver-menu:hover {
+	color: #F60;
+}
+
+.usuario-nom {
+	font-size: 27px;
+}
+
+table {
+	margin: 20px auto 30px auto;
+}
+
+
+
+td {
+	border: 2px solid #F60;
+	padding: .5em;
+	text-align: center;
+}
+
+.premio-extended {
+	
+	line-height: 25px;
+}
+
+a.extended {
+
+	position: static;
+	margin-top: 1em;
+}
+
+ul {
+	margin: 1em 0;
+	padding-left: 1em;
+	list-style-type: decimal;
+}
+
+.fase {
+	margin: 1em 0;
+	border: 1px solid white;
+	color: white;
+	background: black;
+	padding: .5em 1em;
+}
+
+
+.winner {
+	color: darkgreen;
+	margin-top: 1em;
+	background: rgb(170, 212, 170);
+	border: 2px solid darkgreen;
+	padding: .5em;
+}
+
+.loser {
+	border: 2px solid red;
+   margin-top: 1em;
+   background: rgb(251, 185, 170);
+   padding: .5em;
+}
+
+
